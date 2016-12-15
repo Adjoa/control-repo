@@ -10,10 +10,10 @@ mod 'puppet/staging',    '2.0.1'
 
 # Modules from Git
 # Examples: https://github.com/puppetlabs/r10k/blob/master/doc/puppetfile.mkd#examples
-#mod 'apache',
-#  :git    => 'https://github.com/puppetlabs/puppetlabs-apache',
-#  :commit => '83401079053dca11d61945bd9beef9ecf7576cbf'
+mod 'git_version',
+  :git    => 'https://github.com/Adjoa/git_version',
+  :branch => 'master'
 
-#mod 'apache',
-#  :git    => 'https://github.com/puppetlabs/puppetlabs-apache',
-#  :branch => 'docs_experiment'
+mod 'onetofive',
+  :git    => 'https://github.com/Adjoa/onetofive',
+  :branch => 'master'
