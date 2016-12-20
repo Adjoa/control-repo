@@ -1,4 +1,16 @@
 ---
+# mysql parameters
+profile::mysql::server_password: >
+    ENC[PKCS7,MIIBmQYJKoZIhvcNAQcDoIIBijCCAYYCAQAxggEhMIIBHQIBADAFMAACAQEw
+    DQYJKoZIhvcNAQEBBQAEggEAv5JhUTWAh3kJvfzghszuo+HVHSwQJ5mTLHrD
+    CVNL9aSdnd4Nvm0D3DnT/yNJX+PLBQPVLBLpGQIdRN0RBzza264SJuywrS9v
+    Uomxutmk6N4XNnPp4WNXXLd+oK2R9ifzx71yhyx97tTBYGpvKxrxRAMtd/TQ
+    wmPR0UL7sV8vuKtXoMlb0dMY1m/KIab4FPE5GSbA7jPbhQ9BW+oXdBnTjPze
+    u3nLsa/uSCHpF223cVVPCZ/wZ/j77b0VCQRfi10bphgMqjFvDLDIkjAMphas
+    l+cRjF/8ygc3bhO4wbdty71VoNLvxVD+Fbx4S6MAkFD51XGn3KtyTH+Z1RRu
+    6wgpHjBcBgkqhkiG9w0BBwEwHQYJYIZIAWUDBAEqBBBOhZqYBMs2zRfPSFF7
+    QnZigDBM22jUIfIhl1AUGHdCwuP9n7PDhMHnbB+2CitIj8EgbliIR2p7L7iD
+    PeclJITjMAg=]
 # apache parameters
 apache::default_vhost: false
 # website parameters
@@ -17,4 +29,15 @@ profile::website::vhosts:
     docroot: "%{::apache::docroot}/fourth"
   fifth.example.com:
     port: 85
-    docroot: "%{::apache::docroot}/fifth" 
+    docroot: "%{::apache::docroot}/fifth"
+# database parameters
+profile::mysql::db_password: >
+    ENC[PKCS7,MIIBeQYJKoZIhvcNAQcDoIIBajCCAWYCAQAxggEhMIIBHQIBADAFMAACAQEw
+    DQYJKoZIhvcNAQEBBQAEggEAIKSnFbushXz3vWz+7u0YB6Q6y7tXUc2FRKu5
+    Zso6i1c/LVGwlNMn+7SbDuLR1OO8j0NAkQ4+1+v5t2ow9NaIL5bHMWZiezQ8
+    4Qnze6Kb5RJAsiWUnzo1BHkd8fbn1/0/sjfpHGuEXfMj03/xDDC0Wj8ZR8un
+    03xxF934aLluVXuH5F+bg9s4pHyL5WBJ8ijlwj2Tg3eYyiWHaoCiugWne7L5
+    9lar59YMIiAEv/WzhvDZwGANehGZ2FwHrwqicOrGLk+tvNE4/wSefa/GgUJE
+    q5EiDtk3kV7rVvWhGNNEZGRgtaqhV2ZTNyEpuHWZ9ttRhdUISU4mGSUyT7nt
+    lrK1GjA8BgkqhkiG9w0BBwEwHQYJYIZIAWUDBAEqBBD7iPU/1H3x0VmleL+D
+    KDjCgBAz7PQfh2n8qvm3b/zCkge1] 
