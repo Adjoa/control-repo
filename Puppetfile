@@ -13,7 +13,3 @@ mod 'puppet/staging',    '2.0.1'
 mod 'git_version',
   :git    => 'https://github.com/Adjoa/git_version',
   :branch => 'master'
-
-mod 'onetofive',
-  :git    => 'https://github.com/Adjoa/onetofive',
-  :branch => 'master'
