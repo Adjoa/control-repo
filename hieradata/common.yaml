@@ -1,0 +1,20 @@
+---
+# apache parameters
+apache::default_vhost: false
+# website parameters
+profile::website::vhosts:
+  first.example.com:
+    port: 81
+    docroot: "%{::apache::docroot}/first"
+  second.example.com:
+    port: 82
+    docroot: "%{::apache::docroot}/second"
+  third.example.com:
+    port: 83
+    docroot: "%{::apache::docroot}/third"
+  fourth.example.com:
+    port: 84
+    docroot: "%{::apache::docroot}/fourth"
+  fifth.example.com:
+    port: 85
+    docroot: "%{::apache::docroot}/fifth" 

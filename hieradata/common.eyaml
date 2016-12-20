@@ -1,4 +1,5 @@
 ---
+#database parameters
 profile::mysql::server_password: >
     ENC[PKCS7,MIIBmQYJKoZIhvcNAQcDoIIBijCCAYYCAQAxggEhMIIBHQIBADAFMAACAQEw
     DQYJKoZIhvcNAQEBBQAEggEAv5JhUTWAh3kJvfzghszuo+HVHSwQJ5mTLHrD
