@@ -1,4 +1,6 @@
-class profile::database {
+class profile::mysql::install(
+  $root_password = hiera('mysql::server::root_password')
+){
   include apt
 
   apt::source { 'mariadb':
@@ -19,7 +21,7 @@ class profile::database {
     package_name     => 'mariadb-server',
     package_ensure   => '10.1.19+maria-1~trusty',
     service_name     => 'mysql',
-    root_password    => hiera('profile::mysql::server_password'),
+    root_password    => $root_password,
     override_options => {
       mysqld => {
         'log-error' => '/var/log/mysql/mariadb.log',
@@ -41,13 +43,4 @@ class profile::database {
   Class['apt::update'] ->
   Class['::mysql::server'] ->
   Class['::mysql::client']
-
-  $dbs = ['first', 'second', 'third', 'fourth', 'fifth']
-
-  $dbs.each |String $db| {
-    mysql::db {"${db}-db":
-      user     => 'myuser',
-      password => hiera('profile::mysql::db_password'),
-    }
-  }
 }
