@@ -1,5 +1,5 @@
 class profile::mysql::install(
-  $root_password = hiera('mysql::server::root_password')
+  $root_password,
 ){
   include apt
 

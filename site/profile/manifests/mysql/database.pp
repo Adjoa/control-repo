@@ -1,6 +1,10 @@
 class profile::mysql::database(
-  $databases = hiera('profile::mysql::database::instances'),
+  $root_password = hiera('mysql::server::root_password'),
+  $databases     = hiera('profile::mysql::database::instances')
 ){
-  include profile::mysql::install
+  class{'profile::mysql::install': 
+    root_password => $root_password,
+  }
+
   create_resources('mysql::db', $databases)  
 }
