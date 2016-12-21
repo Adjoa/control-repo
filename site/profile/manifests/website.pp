@@ -8,13 +8,13 @@ class profile::website (
 
   create_resources('apache::vhost', $vhosts)  
 
-#  $vhosts.each |Hash $vhost| {
-#    $vhost_docroot = $vhost['docroot']
+  $vhosts.each |Tuple $vhost| {
+    $vhost_docroot = $vhost[1]
 
-#    file { "${vhost_docroot}/default.html":
-#      ensure  => file,
-#      content => "Hello, world!",
-#      require => Apache::Vhost["${vhost}"],
-#    } 
-#  }
+    file { "${vhost_docroot}/default.html":
+      ensure  => file,
+      content => "Hello, world!",
+      require => Apache::Vhost["${vhost}"],
+    } 
+  }
 }
