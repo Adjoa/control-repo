@@ -7,7 +7,7 @@ mod 'puppetlabs/mysql',  '3.10.0'
 mod 'puppetlabs/stdlib', '4.13.1'
 mod 'puppetlabs/concat', '2.2.0'
 mod 'puppet/staging',    '2.0.1'
-
+mod 'puppetlabs-apt',    '2.3.0'
 # Modules from Git
 # Examples: https://github.com/puppetlabs/r10k/blob/master/doc/puppetfile.mkd#examples
 mod 'git_version',
