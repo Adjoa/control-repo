@@ -31,7 +31,7 @@ profile::website::vhosts:
     port: 85
     docroot: "%{::apache::docroot}/fifth"
 # database parameters
-profile::mysql::databases::password:  >
+profile::mysql::database::password:  >
   ENC[PKCS7,MIIBeQYJKoZIhvcNAQcDoIIBajCCAWYCAQAxggEhMIIBHQIBADAFMAACAQEw
   DQYJKoZIhvcNAQEBBQAEggEAIKSnFbushXz3vWz+7u0YB6Q6y7tXUc2FRKu5
   Zso6i1c/LVGwlNMn+7SbDuLR1OO8j0NAkQ4+1+v5t2ow9NaIL5bHMWZiezQ8
@@ -42,7 +42,7 @@ profile::mysql::databases::password:  >
   lrK1GjA8BgkqhkiG9w0BBwEwHQYJYIZIAWUDBAEqBBD7iPU/1H3x0VmleL+D
   KDjCgBAz7PQfh2n8qvm3b/zCkge1]
         
-profile::mysql::database::dbs:
+profile::mysql::database::instances:
   first:
     user: "myuser"
     password:"%{hiera('profile::mysql::databases::password')}"
