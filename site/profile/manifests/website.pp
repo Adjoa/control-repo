@@ -14,7 +14,7 @@ class profile::website (
     file { "${vhost_docroot}/default.html":
       ensure  => file,
       content => "Hello, world!",
-      require => Class["apache::vhosts"],
+      require => Apache::Vhost["${vhost}"],
     } 
   }
 }
