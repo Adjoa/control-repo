@@ -45,16 +45,16 @@ profile::mysql::database::password:  >
 profile::mysql::database::instances:
   first:
     user: "myuser"
-    password:"%{hiera('profile::mysql::databases::password')}"
+    password: "%{hiera('profile::mysql::databases::password')}"
   second:
     user: "myuser"
-    password:"%{hiera('profile::mysql::databases::password')}"
+    password: "%{hiera('profile::mysql::databases::password')}"
         third:
     user: "myuser"
-    password:"%{hiera('profile::mysql::databases::password')}"
+    password: "%{hiera('profile::mysql::databases::password')}"
         fourth:
     user: "myuser"
-    password:"%{hiera('profile::mysql::databases::password')}"
+    password: "%{hiera('profile::mysql::databases::password')}"
         fifth:
     user: "myuser"
-    password:"%{hiera('profile::mysql::databases::password')}"
+    password: "%{hiera('profile::mysql::databases::password')}"
