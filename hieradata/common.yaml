@@ -49,12 +49,12 @@ profile::mysql::database::instances:
   second:
     user: "myuser"
     password: "%{hiera('profile::mysql::databases::password')}"
-        third:
+  third:
     user: "myuser"
     password: "%{hiera('profile::mysql::databases::password')}"
-        fourth:
+  fourth:
     user: "myuser"
     password: "%{hiera('profile::mysql::databases::password')}"
-        fifth:
+  fifth:
     user: "myuser"
     password: "%{hiera('profile::mysql::databases::password')}"
