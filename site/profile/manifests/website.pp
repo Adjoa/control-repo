@@ -4,10 +4,9 @@ class profile::website (
 ){
   class { 'apache':
     default_vhost => $default_vhost,
-  } ->
-  class { 'apache::vhosts':
-    vhosts => $vhosts,
-  }
+  } 
+
+  create_resources('apache::vhost', $vhosts)  
 
   $vhosts.each |Hash $vhost| {
     $vhost_docroot = $vhost['docroot']

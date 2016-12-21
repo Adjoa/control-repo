@@ -1,1 +1,1 @@
-include profile::database
+include profile::mysql::database
