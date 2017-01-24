@@ -12,14 +12,8 @@ class profile::myapp (
     catalina_home => '/opt/tomcat',
   } 
 
-#  file {'myapp war source':
-#    ensure => file,
-#    name   => "/opt/tomcat/app_versions/tepupp_${app_name}.war",
-#    source => "puppet:///modules/profile/webapps/teppup_${app_name}.war",
-#   } ->
-
   tomcat::war {"tepupp_${app_name}.war":
-#   catalina_base => '/opt/tomcat',
+   catalina_base => '/opt/tomcat',
     war_source    => "puppet:///modules/profile/webapps/teppup_${app_name}.war",
   }   
 
