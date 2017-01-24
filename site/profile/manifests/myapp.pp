@@ -4,10 +4,8 @@ class profile::myapp (
   $port     = '9090',
   $app_name = 'myapp'
 ){
-  java::oracle {'jdk6':
-    ensure  => 'present',
-    version => '6',
-    java_se => 'jdk',
+  class {'java':
+    package => 'openjdk-6-jdk',
   }
 
   tomcat::install { '/opt/tomcat':
