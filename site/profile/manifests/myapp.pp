@@ -4,6 +4,10 @@ class profile::myapp (
   $port     = '9090',
   $app_name = 'myapp'
 ){
+  class { 'java':
+    version => '6',
+  }
+
   tomcat::install { '/opt/tomcat':
     source_url => 'http://apache.claz.org/tomcat/tomcat-7/v7.0.75/bin/apache-tomcat-7.0.75.tar.gz',
   }  
