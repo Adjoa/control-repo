@@ -14,13 +14,13 @@ class profile::myapp (
 
   file {'myapp war source':
     ensure => file,
-    name   => "/opt/tomcat/webapps/${app_name}.war",
+    name   => "/opt/tomcat/app_versions/${app_name}.war",
     source => "puppet:///modules/profile/webapps/${app_name}.war",
     require => Service['tomcat-default'],
    } ->
   tomcat::war {"${app_name}.war":
     catalina_base => '/opt/tomcat',
-    war_source    => "/opt/tomcat/webapps/${app_name}.war",
+    war_source    => "/opt/tomcat/app_versions/${app_name}.war",
   }   
 
   firewall { '101 allow access to myapp':
