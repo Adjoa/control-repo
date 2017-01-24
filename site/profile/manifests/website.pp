@@ -6,6 +6,6 @@ class profile::website (
     default_vhost => $default_vhost,
   } 
 
-  create_resources('apache::vhost', $vhosts)  
+  create_resources('apache::vhost', $vhosts){  
   }
 }
