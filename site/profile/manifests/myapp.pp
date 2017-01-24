@@ -18,9 +18,8 @@ class profile::myapp (
     source => "puppet:///modules/profile/webapps/${app_name}.war",
     require => Service['tomcat-default'],
    } ->
-  tomcat::war { 'myapp war ':
+  tomcat::war {"${app_name}.war":
     catalina_base => '/opt/tomcat',
-    war_name      => "${app_name}",
     war_source    => "/opt/tomcat/webapps/${app_name}.war",
   }   
 
