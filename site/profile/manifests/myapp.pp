@@ -17,10 +17,10 @@ class profile::myapp (
 #    name   => "/opt/tomcat/app_versions/${app_name}.war",
 #    source => "puppet:///modules/profile/webapps/${app_name}.war",
 #   } ->
-#  tomcat::war {"${app_name}.war":
-#    catalina_base => '/opt/tomcat',
-#    war_source    => "/opt/tomcat/app_versions/${app_name}.war",
-#  }   
+  tomcat::war {"${app_name}.war":
+#   catalina_base => '/opt/tomcat',
+    war_source    => "/opt/tomcat/app_versions/${app_name}.war",
+  }   
 
   firewall { '101 allow access to myapp':
     dport  => $port,
