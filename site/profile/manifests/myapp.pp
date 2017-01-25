@@ -14,8 +14,13 @@ class profile::myapp (
     catalina_home => '/opt/tomcat',
   } 
 
+  tomcat::config::server { 'tomcat':
+    catalina_base => '/opt/tomcat',
+    port          => $port,
+  }
+
   tomcat::war {"tepupp_${app_name}.war":
-   catalina_base => '/opt/tomcat',
+    catalina_base => '/opt/tomcat',
     war_source    => "puppet:///modules/profile/webapps/teppup_${app_name}.war",
   }   
 
