@@ -16,7 +16,13 @@ class profile::myapp (
 
   tomcat::config::server { 'tomcat':
     catalina_base => '/opt/tomcat',
-    port          => $port,
+    port          => '8005',
+  }
+
+  tomcat::config::server::connector { 'tomcat-http':
+    catalina_base         => '/opt/tomcat',
+    port                  => $port,
+    protocol              => 'HTTP/1.1',
   }
 
   tomcat::war {"tepupp_${app_name}.war":
