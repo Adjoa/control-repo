@@ -18,6 +18,6 @@ mod 'git_version',
   :git    => 'https://github.com/Adjoa/git_version',
   :branch => 'master'
 
-mod 'myapp'
+mod 'myapp',
   :git    => 'https://github.com/Adjoa/myapp',
   :branch => 'master'
